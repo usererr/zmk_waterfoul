@@ -5,7 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
+#include <nordic/nrf52840_qiaa.dtsi>
 / {
     chosen {
         zephyr,display = &oled;
@@ -81,8 +81,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)                                 RC(3,5) 
 		reg = <0>;
 		width = <240>;
 		height = <320>;
-		sitronix,rotation = <0>;
-		sitronix,offset-x = <0>;
-		sitronix,offset-y = <0>;
+		rotation = <0>;
+		x-offset = <0>;
+		y-offset = <0>;
 	};
 };
