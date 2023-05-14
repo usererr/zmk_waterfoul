@@ -1,4 +1,4 @@
-on: [pull_request]
+on: [pull_request,workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
