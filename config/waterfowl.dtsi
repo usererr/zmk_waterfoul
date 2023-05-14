@@ -67,19 +67,23 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)                                 RC(3,5) 
     // TODO: RGB node(s)
 };
 
-&pro_micro_i2c {
-    status = "okay";
+&spi1 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	sck-pin = <0>;
+	mosi-pin = <2>;
+	miso-pin = <3>;
+	cs-gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
 
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        label = "DISPLAY";
-        width = <128>;
-        height = <64>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        prechargep = <0x22>;
-    };
+	display_spi: spi-display@0 {
+		compatible = "sitronix,st7789v";
+		label = "DISPLAY";
+		spi-max-frequency = <2000000>;
+		reg = <0>;
+		width = <240>;
+		height = <320>;
+		sitronix,rotation = <0>;
+		sitronix,offset-x = <0>;
+		sitronix,offset-y = <0>;
+	};
 };
