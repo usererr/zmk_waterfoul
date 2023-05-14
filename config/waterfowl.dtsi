@@ -72,10 +72,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)                                 RC(3,5) 
 &spi0 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
-	cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-    sck-pin = <1>;
-    mosi-pin = <2>;
-    miso-pin = <3>;
+	cs-gpios = <&arduino_header 8 GPIO_ACTIVE_LOW>;
 	st7789v_st7789v_tl019fqv01: st7789v@0 {
 		compatible = "sitronix,st7789v";
 		spi-max-frequency = <20000000>;
