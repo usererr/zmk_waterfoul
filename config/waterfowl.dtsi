@@ -71,9 +71,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)                                 RC(3,5) 
 	compatible = "nordic,nrf-spim";
 	status = "okay";
 	cs-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>;
-    sck-pin = <&pro_micro 1 GPIO_ACTIVE_LOW>;
-    mosi-pin = <&pro_micro 2 GPIO_ACTIVE_LOW>;
-    miso-pin = <&pro_micro 3 GPIO_ACTIVE_LOW>;
+    sck-pin = <1>;
+    mosi-pin = <2>;
+    miso-pin = <3>;
 	st7789v: spi-display@0 {
 		compatible = "sitronix,st7789v";
 		label = "DISPLAY";
