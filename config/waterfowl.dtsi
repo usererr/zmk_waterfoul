@@ -6,6 +6,8 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <nordic/nrf52840_qiaa.dtsi>
+#include "arduino_pro_micro_pins.dtsi"
+
 / {
     chosen {
         zephyr,display = &st7789v_st7789v_tl019fqv01;
