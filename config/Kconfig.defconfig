@@ -16,9 +16,6 @@ config ZMK_SPLIT
 
 if ZMK_DISPLAY
 
-config spi
-    default y
-
 config st7789v
     default y
 
