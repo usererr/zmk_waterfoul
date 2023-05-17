@@ -1,5 +1,9 @@
 include:
   - board: nice_nano_v2
-    shield: ["waterfowl_left","st7789v_tl019fqv01" ]
+    shield:
+      waterfowl_left
+      st7789v_tl019fqv01
   - board: nice_nano_v2
-    shield: ["waterfowl_right","st7789v_tl019fqv01" ]
+    shield:
+      waterfowl_right
+      st7789v_tl019fqv01
